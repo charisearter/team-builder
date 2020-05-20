@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import Form from './Form'
+import Form from './Form';
 import { v4 as uuid } from 'uuid';
 
 
@@ -43,6 +43,12 @@ function App() {
     ) {
       return;
     }
+    const newTeam = { ...formValues, id: uuid() }
+
+    setTeam([ newTeam, ...team ])
+  
+    setFormValues(initialFormValues)
+  }
   
     return (
       <div className="App">
@@ -62,6 +68,6 @@ function App() {
       </div>
     );
   };
-}
+
 
 export default App;
