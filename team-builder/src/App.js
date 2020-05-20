@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './Form';
+import Teammate from './Teammate';
 import { v4 as uuid } from 'uuid';
 
 
@@ -18,7 +19,7 @@ const initialTeamList = [
 const initialFormValues = {
   teammate: '',
   email: '',
-  role: '',
+  role: ''
 };
 
 function App() {
@@ -49,7 +50,7 @@ function App() {
   
     setFormValues(initialFormValues)
   }
-  
+  console.log(formValues.teammate)
     return (
       <div className="App">
         <h1>Team List</h1>
@@ -61,7 +62,7 @@ function App() {
         {
         team.map(person => {
           return (
-            <Form key={person.id} details={person} />
+            <Teammate key={person.id} details={person} />
           )
         })
       }

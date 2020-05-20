@@ -2,7 +2,7 @@ import React from 'react'
 
 function Form(props) {
     const { values, onInputChange, onSubmit } = props;
-    
+    console.log(props);
     return (
     <div>
         <form className='form-container' onSubmit={onSubmit}>
@@ -44,7 +44,7 @@ function Form(props) {
                         <option value='Backend'>Backend Engineer</option>
                         <option value='Frontend'>Frontend Engineer</option>
                         <option value='Designer'>Designer</option>
-                        <option value='Unicorn'>Unicorn</option>
+                        <option value='Intern'>Intern</option>
                     </select>
             </label>
         </div>     
