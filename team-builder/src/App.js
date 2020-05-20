@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './App.css';
 import Form from './Form'
+import { v4 as uuid } from 'uuid';
 
 
 //Team List Object
 const initialTeamList = [
   {
+    id: uuid(),
     teammate: 'Reese',
     email: 'reese@gmail.com',
     role: 'Full Stack Web Dev'
@@ -50,6 +52,13 @@ function App() {
           onInputChange={onInputChange}
           onSubmit={onSubmit}
         />
+        {
+        team.map(person => {
+          return (
+            <Form key={person.id} details={person} />
+          )
+        })
+      }
       </div>
     );
   };
