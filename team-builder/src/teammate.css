@@ -1,13 +1,22 @@
 .member {
-    display: flex;
-    justify-content: center;
-    border: 1px black solid;
-  }
-  ​
-  .btn {
-    margin-bottom: 20px;
-  }
-  ​
-  .bold {
-    font-weight: bold;
-  }
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 2px #6f0000;
+  margin: 2% auto;
+
+}
+
+​ .btn {
+  margin-bottom: 20px;
+}
+
+​ .bold {
+  font-weight: bold;
+}
+
+span {
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}

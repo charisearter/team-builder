@@ -9,11 +9,10 @@ function Form(props) {
         <form className='member-form' onSubmit={onSubmit}>
             <div className='member-info'>
                 <h2>Add a Teammate</h2>
-                <button className='member-info-btn'>Submit</button>
+               
             </div>
 
         <div className='member-info'>
-            <h3>Team Information:</h3>
 
             <label>
             Name:&nbsp;        
@@ -48,11 +47,15 @@ function Form(props) {
                         <option value='Backend'>Backend Engineer</option>
                         <option value='Frontend'>Frontend Engineer</option>
                         <option value='Designer'>Designer</option>
-                        <option value='Intern'>Intern</option>
+                            <option value='Intern'>Intern</option>
+                            <option value='Miracle'>Miracle Worker</option>
+                            <option value='Unicorn'>Unicorn</option>
                     </select>
                     </label>
                     
-        </div>     
+                </div>  
+                <h2>Team Information:</h2>
+                <button className='member-info-btn'>Submit</button>        
         </form>       
     </div>
                
