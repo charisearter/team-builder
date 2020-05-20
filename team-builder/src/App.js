@@ -28,9 +28,9 @@ function App() {
 
   const onInputChange = evt => {
  
-    const { teammate } = evt.target;
+    const { name } = evt.target;
     const { value } = evt.target;
-    setFormValues({ ...formValues, [teammate]: value })
+    setFormValues({ ...formValues, [name]: value })
   };
 
   const onSubmit = evt => {

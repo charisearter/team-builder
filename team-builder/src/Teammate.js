@@ -1,4 +1,5 @@
 import React from 'react'
+import './teammate.css';
 
 function Teammate(props) {
     const { details } = props
@@ -8,10 +9,18 @@ function Teammate(props) {
     }
   
     return (
-      <div>
-        <h2>{details.teammate}</h2>
-        <p>Email: {details.email}</p>
-        <p>Role: {details.role}</p>
+      <div className='member'>
+        <div>
+          <h2>
+            <span className='bold'>{details.teammate}</span>
+          </h2>
+          <p>
+          <span className='bold'>Email:</span> {details.email}
+          </p>
+          <p>
+          <span className='bold'>Role:</span> {details.role}
+          </p>
+        </div>
         </div>
     )
 }

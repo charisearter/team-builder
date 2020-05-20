@@ -1,29 +1,32 @@
 import React from 'react'
+import './form.css';
 
 function Form(props) {
     const { values, onInputChange, onSubmit } = props;
-    console.log(props);
+   
     return (
     <div>
-        <form className='form-container' onSubmit={onSubmit}>
-            <div className='form-group submit'>
+        <form className='member-form' onSubmit={onSubmit}>
+            <div className='member-info'>
                 <h2>Add a Teammate</h2>
-                <button>Submit</button>
+                <button className='member-info-btn'>Submit</button>
             </div>
 
-        <div className='form-group inputs'>
+        <div className='member-info'>
             <h3>Team Information:</h3>
 
             <label>
             Name:&nbsp;        
                 <input
                     type='text'
-                    placeholder='Type the teammates name'
+                    placeholder='Name of Teammate'
                     maxLength='20'
                     name='teammate'
                     value={values.teammate}
                     onChange={onInputChange}/>
-            </label>
+                    </label>
+                </div>
+                <div className='member-info'>
 
             <label>
             Email:&nbsp;
@@ -36,17 +39,19 @@ function Form(props) {
                 onChange={onInputChange}
                 />
             </label>
-
+                </div>
+                < div className='member-info'>
             <label>
                 Role:&nbsp;
                     <select name='role' value={values.role} onChange={onInputChange}>
-                        <option value='' >Select a Role</option>
+                        <option value=''>Select a Role</option>
                         <option value='Backend'>Backend Engineer</option>
                         <option value='Frontend'>Frontend Engineer</option>
                         <option value='Designer'>Designer</option>
                         <option value='Intern'>Intern</option>
                     </select>
-            </label>
+                    </label>
+                    
         </div>     
         </form>       
     </div>
