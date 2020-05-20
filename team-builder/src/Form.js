@@ -22,8 +22,7 @@ function Form(props) {
                     maxLength='20'
                     name='teammate'
                     value={values.teammate}
-                    onChange={onInputChange}
-                />
+                    onChange={onInputChange}/>
             </label>
 
             <label>
